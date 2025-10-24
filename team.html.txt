@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team | Anver Care Group</title>
+  <style>
+    body {font-family:'Segoe UI',Tahoma,sans-serif;margin:0;background:#f4f7fb;}
+    header,footer{background:#002b5b;color:#fff;text-align:center;padding:30px;}
+    nav{background:#001f3f;display:flex;justify-content:center;gap:30px;padding:10px 0;}
+    nav a{color:#ffcc00;text-decoration:none;font-weight:bold;}
+    nav a:hover{text-decoration:underline;}
+    section{max-width:900px;margin:40px auto;background:#fff;padding:40px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
+    .member{display:flex;flex-wrap:wrap;align-items:center;margin-bottom:30px;}
+    .member img{width:150px;height:150px;border-radius:50%;margin-right:20px;}
+    h2{color:#002b5b;}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Our Leadership</h1>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="team.html">Our Team</a>
+  <a href="services.html">Services</a>
+</nav>
+
+<section>
+  <h2>Anthony Okang’o – Founder & Group Chief Executive</h2>
+  <div class="member">
+    <img src="eagle-logo.png" alt="Anthony Okang’o">
+    <p>Anthony Okang’o is a results-driven Administrative and Finance Professional with expertise in actuarial science, investment, and consulting. He leads Anver Care Group with integrity, resilience, and a clear vision for sustainable growth and innovation.</p>
+  </div>
+
+  <h2>Future Leadership Team</h2>
+  <p>As Anver Care Group expands, leadership positions will include Directors for Finance, Digital, Administration, Insurance, and Foundation Divisions — uniting under the shared values of excellence, transparency, and social impact.</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Anver Care Group | anthony.okango@gmail.com</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anver Care Group | Leadership. Vision. Strength.</title>
+  <style>
+    body {font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background-color: #f4f7fb; color: #333;}
+    header {background: linear-gradient(135deg,#002b5b,#004d99);color:#fff;text-align:center;padding:60px 20px;}
+    header img {width:120px;margin-bottom:20px;}
+    nav {background:#001f3f;display:flex;justify-content:center;gap:30px;padding:10px 0;}
+    nav a {color:#ffcc00;text-decoration:none;font-weight:bold;}
+    nav a:hover {text-decoration:underline;}
+    section {max-width:1000px;margin:40px auto;background:#fff;padding:40px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
+    h1 {font-size:2.5em;margin:10px 0 5px;}
+    h2 {color:#002b5b;border-bottom:2px solid #004d99;display:inline-block;padding-bottom:5px;margin-bottom:20px;}
+    .tagline {font-style:italic;color:#ffcc00;}
+    .division {background:#f8fbff;border:1px solid #dde6f3;border-radius:8px;padding:20px;margin:10px 0;}
+    footer {background:#002b5b;color:#fff;text-align:center;padding:25px;font-size:0.95rem;}
+    footer a {color:#ffcc00;text-decoration:none;}
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="eagle-logo.png" alt="Anver Care Eagle Logo">
+  <h1>Anver Care Group</h1>
+  <p>Leadership. Vision. Strength.</p>
+  <p class="tagline">“And in the end, what I learnt is how to be strong alone.”</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="team.html">Our Team</a>
+  <a href="services.html">Services</a>
+</nav>
+
+<section>
+  <h2>About Us</h2>
+  <p>Anver Care Group is a multidisciplinary organization built on excellence, integrity, and innovation. We empower individuals, institutions, and communities through specialized divisions in finance, insurance, technology, and corporate administration — all grounded in vision and strength.</p>
+</section>
+
+<section>
+  <h2>Our Divisions</h2>
+  <div class="division"><strong>Anver Insurance</strong> – Trusted insurance brokerage, underwriting support, and risk management.</div>
+  <div class="division"><strong>Anver Finance</strong> – Investment insights, financial analysis, and advisory services.</div>
+  <div class="division"><strong>Anver Digital</strong> – Driving transformation through data, automation, and analytics.</div>
+  <div class="division"><strong>Anver Admin</strong> – Comprehensive corporate and administrative support.</div>
+  <div class="division"><strong>Anver Foundation</strong> – Empowering communities through education and innovation.</div>
+</section>
+
+<section>
+  <h2>Contact Us</h2>
+  <p style="text-align:center;">
+    📧 <a href="mailto:anthony.okango@gmail.com">anthony.okango@gmail.com</a> <br>
+    📞 +254 792 595 602 <br>
+    🌍 Nairobi, Kenya
+  </p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Anver Care Group. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

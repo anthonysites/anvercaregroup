@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Anver Care Group</title>
+  <style>
+    body{font-family:'Segoe UI',Tahoma,sans-serif;margin:0;background:#f4f7fb;}
+    header,footer{background:#002b5b;color:#fff;text-align:center;padding:30px;}
+    nav{background:#001f3f;display:flex;justify-content:center;gap:30px;padding:10px 0;}
+    nav a{color:#ffcc00;text-decoration:none;font-weight:bold;}
+    nav a:hover{text-decoration:underline;}
+    section{max-width:950px;margin:40px auto;background:#fff;padding:40px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
+    h2{color:#002b5b;border-bottom:2px solid #004d99;display:inline-block;padding-bottom:5px;margin-bottom:15px;}
+    ul{list-style-type:square;margin-left:20px;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Our Services</h1>
+  <p>Empowering growth through insight, integrity, and innovation.</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="team.html">Our Team</a>
+  <a href="services.html">Services</a>
+</nav>
+
+<section>
+  <h2>Anver Insurance</h2>
+  <ul>
+    <li>Insurance brokerage and claims management</li>
+    <li>Underwriting and risk analysis support</li>
+    <li>Health and corporate insurance advisory</li>
+  </ul>
+
+  <h2>Anver Finance</h2>
+  <ul>
+    <li>Investment and portfolio management</li>
+    <li>Financial reporting and strategy consulting</li>
+    <li>Corporate valuation and forecasting</li>
+  </ul>
+
+  <h2>Anver Digital</h2>
+  <ul>
+    <li>Automation and workflow optimization</li>
+    <li>Data analytics and visualization dashboards</li>
+    <li>Technology integration and innovation</li>
+  </ul>
+
+  <h2>Anver Admin</h2>
+  <ul>
+    <li>Executive support and documentation systems</li>
+    <li>Corporate policy development</li>
+    <li>Operations, logistics, and HR coordination</li>
+  </ul>
+
+  <h2>Anver Foundation</h2>
+  <ul>
+    <li>Education and youth empowerment initiatives</li>
+    <li>Community development and CSR programs</li>
+    <li>Public-private partnership engagement</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Anver Care Group. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
