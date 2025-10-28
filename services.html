@@ -3,71 +3,440 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our comprehensive services at Anver Care Group - Insurance, Finance, Digital Solutions, Administration, and Foundation initiatives.">
+  <meta name="keywords" content="Anver services, insurance brokerage, financial consulting, digital transformation, corporate administration, CSR programs">
   <title>Our Services | Anver Care Group</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body{font-family:'Segoe UI',Tahoma,sans-serif;margin:0;background:#f4f7fb;}
-    header,footer{background:#002b5b;color:#fff;text-align:center;padding:30px;}
-    nav{background:#001f3f;display:flex;justify-content:center;gap:30px;padding:10px 0;}
-    nav a{color:#ffcc00;text-decoration:none;font-weight:bold;}
-    nav a:hover{text-decoration:underline;}
-    section{max-width:950px;margin:40px auto;background:#fff;padding:40px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
-    h2{color:#002b5b;border-bottom:2px solid #004d99;display:inline-block;padding-bottom:5px;margin-bottom:15px;}
-    ul{list-style-type:square;margin-left:20px;}
+    :root {
+      --primary-blue: #002b5b;
+      --secondary-blue: #004d99;
+      --accent-yellow: #ffcc00;
+      --light-bg: #f4f7fb;
+      --white: #ffffff;
+      --text-dark: #333333;
+      --text-light: #666666;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      line-height: 1.6;
+      background-color: var(--light-bg);
+      color: var(--text-dark);
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+      color: var(--white);
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,202.7C672,203,768,181,864,170.7C960,160,1056,160,1152,165.3C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+      background-size: cover;
+      background-position: center bottom;
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 2.8rem;
+      margin: 10px 0 5px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .tagline {
+      font-style: italic;
+      color: var(--accent-yellow);
+      font-size: 1.2rem;
+      margin: 15px 0;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    
+    nav {
+      background: var(--primary-blue);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 20px;
+      flex-wrap: wrap;
+    }
+    
+    nav a {
+      color: var(--accent-yellow);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      padding: 8px 16px;
+      border-radius: 4px;
+      position: relative;
+    }
+    
+    nav a:hover {
+      background-color: rgba(255, 204, 0, 0.1);
+    }
+    
+    nav a.active {
+      background-color: rgba(255, 204, 0, 0.2);
+    }
+    
+    nav a.active::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--accent-yellow);
+    }
+    
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: var(--white);
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    h2 {
+      color: var(--primary-blue);
+      border-bottom: 2px solid var(--secondary-blue);
+      display: inline-block;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+    
+    .service-intro {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+      color: var(--text-light);
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    .service-card {
+      background: var(--white);
+      border: 1px solid #e1e8f0;
+      border-radius: 8px;
+      padding: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--secondary-blue);
+    }
+    
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--secondary-blue);
+      margin-bottom: 20px;
+    }
+    
+    .service-card h3 {
+      color: var(--primary-blue);
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+    
+    .service-card ul {
+      list-style-type: none;
+      margin-left: 0;
+    }
+    
+    .service-card li {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+    
+    .service-card li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent-yellow);
+      font-weight: bold;
+    }
+    
+    .cta-section {
+      text-align: center;
+      margin-top: 50px;
+      padding: 30px;
+      background: linear-gradient(135deg, #f8fbff, #e8f1ff);
+      border-radius: 10px;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: var(--secondary-blue);
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+      margin-top: 15px;
+    }
+    
+    .btn:hover {
+      background: var(--primary-blue);
+    }
+    
+    .btn-accent {
+      background: var(--accent-yellow);
+      color: var(--primary-blue);
+    }
+    
+    .btn-accent:hover {
+      background: #e6b800;
+    }
+    
+    footer {
+      background: var(--primary-blue);
+      color: var(--white);
+      text-align: center;
+      padding: 40px 20px;
+    }
+    
+    .footer-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .social-links {
+      margin: 20px 0;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      line-height: 40px;
+      margin: 0 10px;
+      transition: background 0.3s;
+    }
+    
+    .social-links a:hover {
+      background: var(--accent-yellow);
+      color: var(--primary-blue);
+    }
+    
+    .copyright {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    @media (max-width: 768px) {
+      header { padding: 40px 15px 30px; }
+      section { padding: 30px; }
+      h1 { font-size: 2.2rem; }
+      .nav-container { flex-direction: column; gap: 10px; }
+      nav a.active::after { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+    }
+    
+    @media (max-width: 480px) {
+      header { padding: 30px 15px 20px; }
+      section { padding: 20px; margin: 20px auto; }
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.5rem; }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Our Services</h1>
-  <p>Empowering growth through insight, integrity, and innovation.</p>
+  <div class="header-content">
+    <h1>Our Services</h1>
+    <p class="tagline">Empowering growth through insight, integrity, and innovation.</p>
+  </div>
 </header>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="team.html">Our Team</a>
-  <a href="services.html">Services</a>
+  <div class="nav-container">
+    <a href="index.html">Home</a>
+    <a href="team.html">Our Team</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
 <section>
-  <h2>Anver Insurance</h2>
-  <ul>
-    <li>Insurance brokerage and claims management</li>
-    <li>Underwriting and risk analysis support</li>
-    <li>Health and corporate insurance advisory</li>
-  </ul>
-
-  <h2>Anver Finance</h2>
-  <ul>
-    <li>Investment and portfolio management</li>
-    <li>Financial reporting and strategy consulting</li>
-    <li>Corporate valuation and forecasting</li>
-  </ul>
-
-  <h2>Anver Digital</h2>
-  <ul>
-    <li>Automation and workflow optimization</li>
-    <li>Data analytics and visualization dashboards</li>
-    <li>Technology integration and innovation</li>
-  </ul>
-
-  <h2>Anver Admin</h2>
-  <ul>
-    <li>Executive support and documentation systems</li>
-    <li>Corporate policy development</li>
-    <li>Operations, logistics, and HR coordination</li>
-  </ul>
-
-  <h2>Anver Foundation</h2>
-  <ul>
-    <li>Education and youth empowerment initiatives</li>
-    <li>Community development and CSR programs</li>
-    <li>Public-private partnership engagement</li>
-  </ul>
+  <div class="service-intro">
+    <p>At Anver Care Group, we provide comprehensive solutions across multiple disciplines, designed to empower your personal and business growth. Our integrated approach ensures seamless coordination between all our service divisions.</p>
+  </div>
+  
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h3>Anver Insurance</h3>
+      <ul>
+        <li>Insurance brokerage and claims management</li>
+        <li>Underwriting and risk analysis support</li>
+        <li>Health and corporate insurance advisory</li>
+        <li>Customized coverage solutions</li>
+      </ul>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <h3>Anver Finance</h3>
+      <ul>
+        <li>Investment and portfolio management</li>
+        <li>Financial reporting and strategy consulting</li>
+        <li>Corporate valuation and forecasting</li>
+        <li>Wealth management and planning</li>
+      </ul>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">
+        <i class="fas fa-laptop-code"></i>
+      </div>
+      <h3>Anver Digital</h3>
+      <ul>
+        <li>Automation and workflow optimization</li>
+        <li>Data analytics and visualization dashboards</li>
+        <li>Technology integration and innovation</li>
+        <li>Digital transformation consulting</li>
+      </ul>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">
+        <i class="fas fa-building"></i>
+      </div>
+      <h3>Anver Admin</h3>
+      <ul>
+        <li>Executive support and documentation systems</li>
+        <li>Corporate policy development</li>
+        <li>Operations, logistics, and HR coordination</li>
+        <li>Compliance and governance advisory</li>
+      </ul>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">
+        <i class="fas fa-hands-helping"></i>
+      </div>
+      <h3>Anver Foundation</h3>
+      <ul>
+        <li>Education and youth empowerment initiatives</li>
+        <li>Community development and CSR programs</li>
+        <li>Public-private partnership engagement</li>
+        <li>Sustainable development projects</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="cta-section">
+    <h2>Ready to Transform Your Business?</h2>
+    <p>Contact us today to learn how our integrated services can drive your success.</p>
+    <a href="contact.html" class="btn btn-accent">Get In Touch</a>
+  </div>
 </section>
 
 <footer>
-  <p>&copy; 2025 Anver Care Group. All Rights Reserved.</p>
+  <div class="footer-content">
+    <div class="social-links">
+      <a href="https://www.linkedin.com/company/anvercaregroup" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://twitter.com/anvercare" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+    <p>&copy; 2025 Anver Care Group. All Rights Reserved.</p>
+    <p class="copyright">Leadership. Vision. Strength.</p>
+  </div>
 </footer>
+
+<script>
+  // Add subtle animation to service cards on scroll
+  document.addEventListener('DOMContentLoaded', function() {
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    serviceCards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(card);
+    });
+  });
+</script>
 
 </body>
 </html>
