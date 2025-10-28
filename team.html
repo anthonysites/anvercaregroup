@@ -5,40 +5,356 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Team | Anver Care Group</title>
   <style>
-    body {font-family:'Segoe UI',Tahoma,sans-serif;margin:0;background:#f4f7fb;}
-    header,footer{background:#002b5b;color:#fff;text-align:center;padding:30px;}
-    nav{background:#001f3f;display:flex;justify-content:center;gap:30px;padding:10px 0;}
-    nav a{color:#ffcc00;text-decoration:none;font-weight:bold;}
-    nav a:hover{text-decoration:underline;}
-    section{max-width:900px;margin:40px auto;background:#fff;padding:40px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
-    .member{display:flex;flex-wrap:wrap;align-items:center;margin-bottom:30px;}
-    .member img{width:150px;height:150px;border-radius:50%;margin-right:20px;}
-    h2{color:#002b5b;}
+    :root {
+      --primary-blue: #002b5b;
+      --dark-blue: #001f3f;
+      --accent-yellow: #ffcc00;
+      --light-bg: #f4f7fb;
+      --white: #ffffff;
+      --text-dark: #333333;
+      --text-light: #666666;
+      --shadow: 0 4px 12px rgba(0,0,0,0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--light-bg);
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+      color: var(--white);
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+      background-size: cover;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    
+    .header-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    nav {
+      background: var(--dark-blue);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    nav a {
+      color: var(--accent-yellow);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+    
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      text-decoration: none;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    section {
+      margin: 50px auto;
+      background: var(--white);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    
+    .section-header {
+      background: var(--primary-blue);
+      color: var(--white);
+      padding: 20px 30px;
+    }
+    
+    .section-header h2 {
+      margin: 0;
+    }
+    
+    .section-content {
+      padding: 30px;
+    }
+    
+    .member {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .member:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .member-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin-right: 30px;
+      object-fit: cover;
+      border: 5px solid var(--light-bg);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .member:hover .member-image {
+      transform: scale(1.03);
+    }
+    
+    .member-info {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .member-name {
+      color: var(--primary-blue);
+      margin-bottom: 5px;
+    }
+    
+    .member-title {
+      color: var(--accent-yellow);
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+    
+    .member-bio {
+      color: var(--text-light);
+    }
+    
+    .future-leadership {
+      background: var(--light-bg);
+      padding: 25px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    
+    .future-leadership h3 {
+      color: var(--primary-blue);
+      margin-bottom: 15px;
+    }
+    
+    .positions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .position-card {
+      background: var(--white);
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border-left: 4px solid var(--accent-yellow);
+    }
+    
+    .position-card h4 {
+      color: var(--primary-blue);
+      margin-bottom: 5px;
+    }
+    
+    footer {
+      background: var(--dark-blue);
+      color: var(--white);
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .contact-info {
+      margin: 15px 0;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .social-icon:hover {
+      background: var(--accent-yellow);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+      
+      .member {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .member-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .header-subtitle {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
 <header>
-  <h1>Our Leadership</h1>
+  <h1>Our Leadership Team</h1>
+  <p class="header-subtitle">Meet the dedicated professionals guiding Anver Care Group toward excellence and innovation in healthcare services.</p>
 </header>
+
 <nav>
   <a href="index.html">Home</a>
   <a href="team.html">Our Team</a>
   <a href="services.html">Services</a>
+  <a href="contact.html">Contact Us</a>
 </nav>
 
-<section>
-  <h2>Anthony Okang’o – Founder & Group Chief Executive</h2>
-  <div class="member">
-    <img src="eagle-logo.png" alt="Anthony Okang’o">
-    <p>Anthony Okang’o is a results-driven Administrative and Finance Professional with expertise in actuarial science, investment, and consulting. He leads Anver Care Group with integrity, resilience, and a clear vision for sustainable growth and innovation.</p>
-  </div>
+<div class="container">
+  <section>
+    <div class="section-header">
+      <h2>Executive Leadership</h2>
+    </div>
+    <div class="section-content">
+      <div class="member">
+        <img src="eagle-logo.png" alt="Anthony Okang'o" class="member-image">
+        <div class="member-info">
+          <h3 class="member-name">Anthony Okang'o</h3>
+          <p class="member-title">Founder & Group Chief Executive</p>
+          <p class="member-bio">Anthony Okang'o is a results-driven Administrative and Finance Professional with extensive expertise in actuarial science, investment, and consulting. With over 15 years of experience in financial strategy and organizational leadership, he founded Anver Care Group with a vision to transform healthcare delivery through innovation and sustainable practices. Anthony's leadership is characterized by integrity, resilience, and a commitment to creating meaningful social impact through quality healthcare services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2>Future Leadership Team</h2>
-  <p>As Anver Care Group expands, leadership positions will include Directors for Finance, Digital, Administration, Insurance, and Foundation Divisions — uniting under the shared values of excellence, transparency, and social impact.</p>
-</section>
+  <section>
+    <div class="section-header">
+      <h2>Future Leadership</h2>
+    </div>
+    <div class="section-content">
+      <div class="future-leadership">
+        <h3>Building Our Leadership Team</h3>
+        <p>As Anver Care Group continues to expand its services and impact, we are actively building a diverse leadership team that will drive our mission forward. Our future leadership structure will include dedicated directors for key divisions, all united under our shared values of excellence, transparency, and social responsibility.</p>
+        
+        <div class="positions-grid">
+          <div class="position-card">
+            <h4>Director of Finance</h4>
+            <p>Overseeing financial strategy, budgeting, and fiscal management across all divisions.</p>
+          </div>
+          <div class="position-card">
+            <h4>Director of Digital Innovation</h4>
+            <p>Leading our technological transformation and digital service delivery initiatives.</p>
+          </div>
+          <div class="position-card">
+            <h4>Director of Administration</h4>
+            <p>Managing operational efficiency and organizational development.</p>
+          </div>
+          <div class="position-card">
+            <h4>Director of Insurance Services</h4>
+            <p>Expanding our insurance offerings and client service excellence.</p>
+          </div>
+          <div class="position-card">
+            <h4>Director of Foundation</h4>
+            <p>Guiding our philanthropic efforts and community outreach programs.</p>
+          </div>
+        </div>
+        
+        <p style="margin-top: 20px;">We believe that strong, visionary leadership is essential to achieving our mission of providing accessible, high-quality healthcare services to communities across the region.</p>
+      </div>
+    </div>
+  </section>
+</div>
 
 <footer>
-  <p>&copy; 2025 Anver Care Group | anthony.okango@gmail.com</p>
+  <div class="footer-content">
+    <h3>Anver Care Group</h3>
+    <p class="contact-info">Email: anthony.okango@gmail.com</p>
+    
+    <div class="social-links">
+      <a href="#" class="social-icon">in</a>
+      <a href="#" class="social-icon">f</a>
+      <a href="#" class="social-icon">t</a>
+    </div>
+    
+    <p class="copyright">&copy; 2025 Anver Care Group. All rights reserved.</p>
+  </div>
 </footer>
 </body>
 </html>
